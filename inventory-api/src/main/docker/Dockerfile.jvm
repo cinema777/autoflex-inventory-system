@@ -81,6 +81,7 @@
 # https://rh-openjdk.github.io/redhat-openjdk-containers/
 ###
 FROM maven:3.9.6-eclipse-temurin-21 AS build
+
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN mvn package -DskipTests -Dnet.bytebuddy.experimental=true
