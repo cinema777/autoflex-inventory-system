@@ -84,7 +84,8 @@
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /usr/src/app
 
-COPY . .
+COPY inventory-api/pom.xml .
+COPY inventory-api/src ./src
 RUN mvn package -DskipTests -Dnet.bytebuddy.experimental=true
 
 FROM eclipse-temurin:21-jre
