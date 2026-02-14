@@ -81,14 +81,15 @@
 # https://rh-openjdk.github.io/redhat-openjdk-containers/
 ###
 FROM maven:3.9.6-eclipse-temurin-21 AS build
-
-COPY . /usr/src/app
 WORKDIR /usr/src/app
+
+COPY pom.xml .
+COPY src ./src
 RUN mvn package -DskipTests -Dnet.bytebuddy.experimental=true
 
 FROM eclipse-temurin:21-jre
-RUN mkdir /deployments
-COPY --from=build /usr/src/app/target/quarkus-app/ /deployments/
+WORKDIR /deployments
+COPY --from=build /usr/src/app/target/quarkus-app/ .
 EXPOSE 8080
-ENTRYPOINT ["java", "-Dnet.bytebuddy.experimental=true", "-jar", "/deployments/quarkus-run.jar"]
+ENTRYPOINT ["java", "-Dnet.bytebuddy.experimental=true", "-jar", "quarkus-run.jar"]
 
