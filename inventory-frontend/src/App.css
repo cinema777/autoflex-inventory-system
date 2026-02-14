@@ -1,0 +1,30 @@
+:root {
+  --text-main: #1e293b;    
+  --text-secondary: #64748b; 
+  --accent-success: #059669; 
+  --bg-card: #ffffff; 
+}
+
+body {
+  background-color: #f8fafc !important;
+  color: var(--text-main) !important;
+}
+
+
+.card-suggestion {
+  background-color: var(--bg-card) !important;
+  border: 1px solid #dcfce7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.product-title {
+  color: var(--text-main) !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}

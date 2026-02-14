@@ -1,0 +1,49 @@
+# --- JAVA / MAVEN / QUARKUS ---
+**/target/
+**/.quarkus/
+**/mvnw
+**/mvnw.cmd
+.factorypath
+nb-configuration.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+.flattened-pom.xml
+
+# --- NODE / REACT / CYPRESS ---
+**/node_modules/
+**/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+cypress/videos/
+cypress/screenshots/
+
+# --- AMBIENTE E SEGURANÇA ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.certs/
+
+# --- IDEs (VS Code, IntelliJ, Eclipse) ---
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+.settings/
+.classpath
+.project
+bin/
+
+# --- SISTEMA OPERACIONAL / TEMPORÁRIOS ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.orig
+*.rej
