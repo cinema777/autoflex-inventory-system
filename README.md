@@ -30,3 +30,10 @@ Sistema full-stack desenvolvido para o controle de estoque de matérias-primas e
 1. **Back-end**: Na pasta `inventory-api`, execute `mvn quarkus:dev`.
 2. **Front-end**: Na pasta `inventory-frontend`, execute `npm run dev`.
 3. Acesse `http://localhost:5173`.
+
+### 🗄️ Configuração do Banco de Dados
+O sistema utiliza **PostgreSQL**. Por padrão, ele tenta se conectar em `localhost:5432`.
+
+As credenciais estão parametrizadas no `application.properties` para facilitar a execução:
+- **Usuário**: Definido pela variável `${DB_USER}` (padrão: `postgres`).
+- **Senha**: Definida pela variável `${DB_PASSWORD}` (padrão: `sua_senha_padrao`).
