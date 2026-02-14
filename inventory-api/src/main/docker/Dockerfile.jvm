@@ -80,11 +80,11 @@
 # You can find more information about the UBI base runtime images and their configuration here:
 # https://rh-openjdk.github.io/redhat-openjdk-containers/
 ###
+
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /usr/src/app
 
-COPY pom.xml .
-COPY src ./src
+COPY . .
 RUN mvn package -DskipTests -Dnet.bytebuddy.experimental=true
 
 FROM eclipse-temurin:21-jre
